@@ -10,8 +10,8 @@ mongoose.connect(`mongodb+srv://Chin2:Vaibhav19@cluster0.brshx.mongodb.net/url-s
 .then((result)=> console.log(`db connected...`))
 .catch((err)=> console.log(err));
 
-const hostname = '127.0.0.1'
-const port = process.env.PORT || 5000
+const PORT = process.env.PORT || 8000;
+
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'));
@@ -46,6 +46,4 @@ app.get('/:shortUrl', async(req,res)=>{
     res.redirect(shortUrl.full)
 })
 
-app.listen(port,hostname, ()=>{
-    console.log(`App has been started at http://${hostname}:${port}/`);
-});
+app.listen(PORT, console.log(`Server started on port ${PORT}`));
