@@ -25,6 +25,8 @@ let mainId = "";
 let mainUrl = "";
 app.get("/link", async (req,res)=>{
     res.render('link.ejs', {shorturls : mainId, url: mainUrl})
+    mainId = "";
+    mainUrl = "";
 })
 app.post("/shortUrls", async(req,res)=>{
     let id = await shortid.generate()
