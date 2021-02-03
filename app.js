@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
+require('dotenv').config();
 const mongoose = require('mongoose')
 const shortid = require('shortid')
 const path = require('path');
 const shorturls = require('./models/shorturls');
 const ShortUrls = require('./models/shorturls')
-const pass = require('./models/pass')
 
-mongoose.connect(`mongodb+srv://Chin2:${pass}@cluster0.brshx.mongodb.net/url-shortner?retryWrites=true&w=majority`,{ useNewUrlParser: true , useUnifiedTopology:true})
+mongoose.connect(`mongodb+srv://Chin2:${process.env.DB_PASSWORD}@cluster0.brshx.mongodb.net/url-shortner?retryWrites=true&w=majority`,{ useNewUrlParser: true , useUnifiedTopology:true})
 .then((result)=> console.log(`db connected...`))
 .catch((err)=> console.log(err));
 
