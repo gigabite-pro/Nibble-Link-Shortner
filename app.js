@@ -7,7 +7,9 @@ const path = require('path');
 const shorturls = require('./models/shorturls');
 const ShortUrls = require('./models/shorturls')
 
-mongoose.connect(`mongodb+srv://Chin2:${process.env.DB_PASSWORD}@cluster0.brshx.mongodb.net/url-shortner?retryWrites=true&w=majority`,{ useNewUrlParser: true , useUnifiedTopology:true})
+const pass = process.env.DB_PASSWORD || "Vaibhav_19"
+
+mongoose.connect(`mongodb+srv://Chin2:${pass}@cluster0.brshx.mongodb.net/url-shortner?retryWrites=true&w=majority`,{ useNewUrlParser: true , useUnifiedTopology:true})
 .then((result)=> console.log(`db connected...`))
 .catch((err)=> console.log(err));
 
