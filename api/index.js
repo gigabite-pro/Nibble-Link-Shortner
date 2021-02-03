@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose')
 const shortid = require('shortid')
 const path = require('path');
-const ShortUrls = require('./models/shorturls')
+const ShortUrls = require('../models/shorturls')
 require('dotenv').config();
 
 mongoose.connect(`mongodb+srv://Chin2:${process.env.DB_PASSWORD}@cluster0.brshx.mongodb.net/url-shortner?retryWrites=true&w=majority`,{ useNewUrlParser: true , useUnifiedTopology:true})
