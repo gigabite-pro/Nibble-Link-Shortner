@@ -1,13 +1,12 @@
 const express = require('express');
 const app = express();
-require('dotenv').config();
 const mongoose = require('mongoose')
 const shortid = require('shortid')
 const path = require('path');
-const shorturls = require('./models/shorturls');
 const ShortUrls = require('./models/shorturls')
+require('dotenv').config();
 
-mongoose.connect(`mongodb+srv://Chin2:Vaibhav_19@cluster0.brshx.mongodb.net/url-shortner?retryWrites=true&w=majority`,{ useNewUrlParser: true , useUnifiedTopology:true})
+mongoose.connect(`mongodb+srv://Chin2:Vaibhav19@cluster0.brshx.mongodb.net/url-shortner?retryWrites=true&w=majority`,{ useNewUrlParser: true , useUnifiedTopology:true})
 .then((result)=> console.log(`db connected...`))
 .catch((err)=> console.log(err));
 
