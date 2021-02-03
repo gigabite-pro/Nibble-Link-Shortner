@@ -23,14 +23,16 @@ app.get("/", (req,res)=>{
 })
 
 let mainId = "";
+let mainUrl = "";
 app.get("/link", async (req,res)=>{
-    res.render('link.ejs', {shorturls : mainId})
+    res.render('link.ejs', {shorturls : mainId, url: mainUrl})
 })
 app.post("/shortUrls", async(req,res)=>{
     let id = await shortid.generate()
     mainId = id
+    mainUrl = req.body.fullurl
     await ShortUrls.create({
-        full : req.body.fullurl,
+        full : mainUrl,
         short: id,
     });
     res.redirect("/link")

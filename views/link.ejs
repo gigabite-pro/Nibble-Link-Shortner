@@ -17,7 +17,7 @@
         body{
             background-color: black;
         }
-        h1,h3,h6{
+        h1,h3{
             font-family: 'Lexend Deca', sans-serif;
             color: white;
             text-align: center;
@@ -28,6 +28,31 @@
             font-weight: bold;
             letter-spacing: 3px;
         }
+        a{
+            font-family: 'Lexend Deca', sans-serif;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            color: gray;
+        }
+        footer{
+            position: absolute;
+            bottom: 2rem;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-family: 'Lexend Deca', sans-serif;
+            font-size: 1.5rem;
+        }
+        footer a{
+            text-decoration: none;
+            color: white;
+        }
+        footer a:hover{
+            color: gray;
+        }
     </style>
   </head>
   <body>
@@ -37,10 +62,13 @@
         <div class="row justify-content-center">
             <div class="col-md-3">
                 <h3>The Shortened link is:</h3>
-                    <h6 class="text-center mt-3" id="txt">https://nibble.tk/<%= shorturls%></h6>
+                    <a href="<%= url%>" target="_blank"><h6 class="text-center mt-3" id="txt">https://nibble.tk/<%= shorturls%></h6></a>
             </div>
         </div>
     </div>
+    <footer>
+        Made by <a href="https://github.com/gigabite-pro/Nibble-Link-Shortner" target="_blank">Vaibhav</a>
+    </footer>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
