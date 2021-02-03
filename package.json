@@ -2,9 +2,9 @@
   "name": "nibble",
   "version": "1.0.0",
   "description": "A link Shortner",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "author": "Vaibhav Sharma",
   "license": "ISC",
@@ -18,5 +18,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gigabite-pro/Nibble-Link-Shortner.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/gigabite-pro/Nibble-Link-Shortner/issues"
+  },
+  "homepage": "https://github.com/gigabite-pro/Nibble-Link-Shortner#readme"
 }
