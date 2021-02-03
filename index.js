@@ -6,7 +6,7 @@ const path = require('path');
 const ShortUrls = require('./models/shorturls')
 require('dotenv').config();
 
-mongoose.connect(`mongodb+srv://Chin2:${process.env.DB_PASSWORD}@cluster0.brshx.mongodb.net/url-shortner?retryWrites=true&w=majority`,{ useNewUrlParser: true , useUnifiedTopology:true})
+mongoose.connect(`mongodb+srv://Chin2:Vaibhav19@cluster0.brshx.mongodb.net/url-shortner?retryWrites=true&w=majority`,{ useNewUrlParser: true , useUnifiedTopology:true})
 .then((result)=> console.log(`db connected...`))
 .catch((err)=> console.log(err));
 
