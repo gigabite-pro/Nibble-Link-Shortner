@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const shortId = require('shortid')
 
 
 const shortUrls = new mongoose.Schema({

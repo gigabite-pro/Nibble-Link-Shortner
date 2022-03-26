@@ -28,14 +28,33 @@ app.get("/link", async (req,res)=>{
     mainId = "";
     mainUrl = "";
 })
+
+app.get('/checkBacklink', (req,res)=>{
+    const backlink = req.query.backlink;
+    ShortUrls.findOne({short : backlink})
+    .then(doc => {
+        if(doc){
+            res.json({
+                status: true,
+            })
+        }else{
+            res.json({
+                status: false,
+            })
+        }
+    }).catch(err => {
+        console.log(err)
+    })
+})
+
 app.post("/shortUrls", async(req,res)=>{
-    let id = await shortid.generate()
-    mainId = id
     mainUrl = req.body.fullurl
+    backlink = req.body.backlink
     await ShortUrls.create({
         full : mainUrl,
-        short: id,
+        short: backlink,
     });
+    mainId = backlink;
     res.redirect("/link")
 })
 
