@@ -75,8 +75,8 @@
         <div class="row justify-content-center">
             <div class="col-md-3">
                 <form action="/shortUrls" method="POST" id="form">
-                    <input type="text" name="fullurl" class="form-control" id="url" placeholder="Full URL with http:// or https://" autocomplete="off">
-                    <input type="text" name="backlink" class="form-control mt-2" id="backlink" placeholder="Shorten to? E.g - nibble.ga/{shortened}" autocomplete="off">
+                    <input type="text" name="fullurl" class="form-control" id="url" placeholder="Full URL with http:// or https://" autocomplete="off" required>
+                    <input type="text" name="backlink" class="form-control mt-2" id="backlink" placeholder="Shorten to? E.g - nibble.ga/{shortened}" autocomplete="off" required>
                     <p id="error1" class="err">Invalid Backlink</p>
                     <p id="error2" class="err">Backlink already exists</p>
                     <button type="submit" class="btn btn-light mt-3">Shorten</button>
