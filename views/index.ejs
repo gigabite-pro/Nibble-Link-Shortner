@@ -33,9 +33,18 @@
             width: 20rem;
             margin: auto;
         }
-        #backlink{
+        .backlink{
+            padding-top: 1rem;
             width: 20rem;
-            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .label{
+            color: white;
+        }
+        #backlink{
+            width: 15rem;
         }
         form{
             margin-top: 1rem;
@@ -75,8 +84,11 @@
         <div class="row justify-content-center">
             <div class="col-md-3">
                 <form action="/shortUrls" method="POST" id="form">
-                    <input type="text" name="fullurl" class="form-control" id="url" placeholder="Full URL with http:// or https://" autocomplete="off" required>
-                    <input type="text" name="backlink" class="form-control mt-2" id="backlink" placeholder="Shorten to? E.g - nibble.ga/{shortened}" autocomplete="off" required>
+                    <input type="text" name="fullurl" class="input form-control" id="url" placeholder="Full URL with http:// or https://" autocomplete="off" required>
+                    <div class="backlink">
+                        <label for="backlink" class="label">nibble.ga/ </label>
+                        <input type="text" name="backlink" class="form-control" id="backlink" placeholder="shorten" autocomplete="off" required>
+                    </div>
                     <p id="error1" class="err">Invalid Backlink</p>
                     <p id="error2" class="err">Backlink already exists</p>
                     <button type="submit" class="btn btn-light mt-3">Shorten</button>
